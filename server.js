@@ -25,7 +25,7 @@ server.get("/gamestate", (req, res) => {
   
   
   server.get("/newgame", async (req, res) => {
-    let newID = uuidv4();
+    let newID = uuid.uuidv4();
     let num = await wordGen();
     let answer = req.query.answer
     if (answer) {
